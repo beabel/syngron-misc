@@ -308,7 +308,7 @@ author_email="syngron(a)gmail.com">
 				'td {vertical-align: top}',
 				'.clickable {cursor:pointer; color:', DARK_BLUE, '}',
 				'.clickable:hover {text-decoration: underline}', 
-				'.busy {color: dark_blue; }');
+				'.busy {color: blue; }');
 				out.push('</style>');
 			return out.join('');
 		}
@@ -329,7 +329,90 @@ author_email="syngron(a)gmail.com">
 			//	nxtYear = year;
 			//	if(nxtMonth > 12) {
 				//		nxtMonth = 1;
-				//		nxtYear = parseInt(year)+1;
+				//		nxtYear = parseInt(year)+1;291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+                                //'html, body { height: 100%;}',
+                                '.month td {text-align: center; padding:2px 4px 1px}',
+                                '.month,td.dow,td.monthHeader {background-color:', LIGHT_BLUE, '}',
+                                'td.normal {background-color:', WHITE, '}',
+                                'td.weekend {background-color:', WEEKEND, '}',
+                                'td.outer {padding-right: 4px; padding-bottom: 4px; }',
+                                'td.dow {max-width: 5px; border-width: 0 0 1px 0; border-style:solid;',
+                                        'border-color: ', DIVIDER, '}',
+                                'td.today {padding: 1px 3px !important; background-color:', TODAY,
+                                        ';color:#fff !important; border-width: 1px; border-style:solid;',
+                                        'border-color: ', TODAY_BORDER_DARK, ' ', TODAY_BORDER_LIGHT, ' ',
+                                        TODAY_BORDER_LIGHT, ' ', TODAY_BORDER_DARK, '}',
+                                'td.monthHeader {font-weight:bold}',
+                                '.month {table-layout: fixed; width: 100%; background-color:', LIGHT_BLUE,
+                                        ';border: 1px solid ', BORDER_GREY, '}',
+                                'body, td {font-family:Arial;font-size: 12.8px}',
+                                'body {margin-left:10px; background-color:', WHITE, '}',
+                                'td {vertical-align: top}',
+                                '.clickable {cursor:pointer; color:', DARK_BLUE, '}',
+                                '.clickable:hover {text-decoration: underline}', 
+                                '.busy {color: blue; }');
+                                out.push('</style>');
+                        return out.join('');
+                }
+                document.write(getStyles());
+                var tentativeYear = gadgets.views.getParams()['year'];
+                displayCurrentYear(tentativeYear);
+                // This is here to make it look nicer for gmail
+                gadgets.window.adjustHeight(2600);
+                //for(i=1; i<=12; i++ ) {
+                        //      year = tentativeYear;
+                        //      month = i;
+                        //      nxtMonth = parseInt(month)+1;
+                        //      nxtYear = year;
+                        //      if(nxtMonth > 12) {
+                                //              nxtMonth = 1;
+                                //              nxtYear = parseInt(year)+1;
+                                //      }
+M4F4n
+Commit changes
+
 				//	}
 			//	startDate = {year: year, month: month, date: 1, hour: 0, minute: 0, second: 0};
 			//	endDate = {year: nxtYear, month: nxtMonth, date: 1, hour: 0, minute: 0, second: 0};
